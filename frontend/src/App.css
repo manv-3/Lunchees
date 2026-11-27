@@ -1,19 +1,209 @@
-* { box-sizing: border-box; }
+/* Beginner-style college FSD project CSS: simple boxes, standard fonts, plain borders */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #eeeeee;
   color: #222222;
+  font-size: 14px;
+  line-height: 1.4;
 }
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
 .site-header {
   background-color: #003366;
   color: #ffffff;
   border-bottom: 4px solid #ff9900;
   padding: 14px 20px;
 }
-.site-footer {
-  background-color: #222222;
-  color: #eeeeee;
-  text-align: center;
-  padding: 14px 16px;
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
+
+.college-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.app-title {
+  margin: 4px 0 2px;
+  font-size: 24px;
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #d9e6f2;
+}
+
+.user-box {
+  background-color: #004488;
+  border: 1px solid #6699cc;
+  padding: 8px 12px;
+  text-align: right;
+  font-size: 13px;
+}
+
+.user-box div {
+  margin-bottom: 4px;
+}
+
+.role-badge {
+  background-color: #ffffcc;
+  color: #333333;
+  border: 1px solid #999900;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 18px auto;
+  padding: 0 14px;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #003366;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 6px;
+}
+
+.panel h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333333;
+}
+
+.hint {
+  color: #555555;
+  font-size: 13px;
+  margin: 4px 0 10px;
+}
+
+/* Login Layout */
+.login-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forms & Inputs */
+.simple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.simple-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  padding: 7px 8px;
+  border: 1px solid #888888;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+.inline-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.inline-form input {
+  flex: 1;
+  min-width: 180px;
+}
+
+.inline-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+button,
+.btn-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #555555;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.small-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.btn-blue {
+  background-color: #0066cc;
+  color: #ffffff;
+  border-color: #004499;
