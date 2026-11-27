@@ -1,0 +1,15 @@
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# Java / Maven / H2 DB
+backend/target/
+backend/data/
+*.jar
+*.log
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+*.iml
